@@ -1,5 +1,12 @@
 # Autonomous SRE Investigation Agent
 
+## Overview
+
+An SRE investigation agent that works through its tools in a fixed order: logs, then metrics, then traces, and only then a hypothesis about the cause. `POST /agent/run` returns that investigation, and any request to page someone is refused. A versioned `/v1` ops API adds workspaces, tenant isolation, job approval and audit records.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local laptop proof with tests; it never pages, calls no hosted model and refuses production apply.
+
 <!-- project-guide:start -->
 ## Project guide
 
